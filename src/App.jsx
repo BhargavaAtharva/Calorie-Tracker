@@ -1,6 +1,4 @@
 import "./styles.css"
-import API_APPID from "./env"
-import API_KEY from "./env"
 import { useState } from "react"
 export default function App(){
 const [food, setfood] = useState("")
@@ -8,6 +6,8 @@ const [quant, setquant] = useState("")
 const [cal, setcal] = useState(null)
 const [err, seterr] = useState(null)
 const [serving, setserving] = useState(null)
+const appId = import.meta.env.API_APPID;
+const appKey = import.meta.env.API_KEY;
 const getcal=async()=>{
   const query=`${food} ${quant}`;
   if(`${food}`==""||`${quant}`=="")
