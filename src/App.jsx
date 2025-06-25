@@ -6,8 +6,8 @@ const [quant, setquant] = useState("")
 const [cal, setcal] = useState(null)
 const [err, seterr] = useState(null)
 const [serving, setserving] = useState(null)
-const appId = import.meta.env.API_APPID;
-const appKey = import.meta.env.API_KEY;
+const appId = import.meta.env.VITE_API_APPID;
+const appKey = import.meta.env.VITE_API_KEY;
 const getcal=async()=>{
   const query=`${food} ${quant}`;
   if(`${food}`==""||`${quant}`=="")
